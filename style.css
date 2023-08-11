@@ -16,19 +16,27 @@ body {
 
 header {
     width: 100%;
-    padding: 1rem;
 }
 
 header #masjid-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
 header #masjid-header #title {
+    display: flex;
+    align-items: center;
+    color: black;
     font-size: 2rem;
     font-weight: 700;
     width: 50%;
+}
+
+header #masjid-header #title img {
+    width: 4rem;
+    margin-right: 0.5rem;
 }
 
 header #masjid-header #jadwal-sholat {
@@ -64,13 +72,12 @@ header #masjid-header #jadwal-sholat #jadwal-sholat-hari .waktu-sholat {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
     -2px -2px 4px rgba(255, 255, 255, 0.8);
     cursor: default;
-    transition: 0.3s all ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 header #masjid-header #jadwal-sholat #jadwal-sholat-hari .waktu-sholat:hover {
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3),
     inset -2px -2px 4px rgba(255, 255, 255, 0.8);
-    transition: 0.3s all ease-in-out;
 }
 
 header #masjid-header #jadwal-sholat #jadwal-sholat-hari .waktu-sholat .nama-sholat {
@@ -82,27 +89,172 @@ header #masjid-header #jadwal-sholat #jadwal-sholat-hari .waktu-sholat .jam-shol
     font-weight: 500;
 }
 
-nav {
+header .navbar {
     background-color: black;
     color: white;
     padding: 0 10rem;
-}
-
-nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
 
-nav ul li {
+header .navbar .navbar-link{
+    color: bisque;
     padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
 }
 
-nav ul li:hover {
-    background-color: #333;
+header .navbar .navbar-link:hover {
+    background-color: #444;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-nav ul li a {
-    color: white;
+#info {
+    padding: 2rem 0;
+}
+
+#info .info-card{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: bisque;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#info .info-card .info-card-body{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#info .info-card .info-card-body:nth-child(1),
+#info .info-card .info-card-body:nth-child(3) {
+    background-color: rgba(222, 184, 135, 0.2);
+}
+
+#info .info-card .info-card-body img {
+    width: 4rem;
+}
+
+#info .info-card .info-card-body .info-judul{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#info .info-card .info-card-body .info-isi {
+    margin: 0.5rem 0;
+}
+
+#info .info-card .info-card-body .info-isi2 {
+    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+#info .info-card .info-card-body .info-link {
+    background-color: black;
+    color: bisque;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+#info .info-card .info-card-body a img {
+    width: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#info .info-card .info-card-body .info-link:hover {
+    background-color: #444;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#infaq {
+    background-color: black;
+}
+
+#infaq .infaq-card {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+}
+
+#infaq .infaq-card .infaq-card-1 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+#infaq .infaq-card .infaq-card-1 .infaq-judul {
+    color: bisque;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#infaq .infaq-card .infaq-card-1 .infaq-isi {
+    background-color: bisque;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border-bottom: 1px solid;
+    text-align: start;
+    padding: 0.5rem;
+}
+
+table thead, tfoot {
+    background-color: rgba(222, 184, 135, 0.5);
+}
+
+#infaq .infaq-card .infaq-card-2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-judul {
+    color: bisque;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi {
+    color: bisque;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi .saldo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi .saldo span:nth-child(2) {
+    font-weight: 700;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi .transfer {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi .rekening p:last-child {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi .rekening p:last-child span {
+    font-weight: 700;
 }
