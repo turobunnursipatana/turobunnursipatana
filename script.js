@@ -111,5 +111,55 @@ const renderMenu = () => {
     navbar.innerHTML += navbarLink;
 }
 
+// BERITA
+const renderBerita = () => {
+    let beritaTerbaru = document.querySelector('.berita-terbaru');
+    let beritaCard = "";
+    var berita = [
+        {
+            judul: "Lorem ipsum dolor sit amet consectetur",
+            penulis: "Nama Penulis",
+            tanggal: "Sabtu, 19 Agustus 2023",
+            gambar: "images/icons/breaking-news.png",
+            link: "#"
+        },
+        {
+            judul: "Lorem ipsum dolor sit amet consectetur",
+            penulis: "Nama Penulis",
+            tanggal: "Sabtu, 19 Agustus 2023",
+            gambar: "images/icons/breaking-news.png",
+            link: "#"
+        },
+        {
+            judul: "Lorem ipsum dolor sit amet consectetur",
+            penulis: "Nama Penulis",
+            tanggal: "Sabtu, 19 Agustus 2023",
+            gambar: "images/icons/breaking-news.png",
+            link: "#"
+        },
+        {
+            judul: "Lorem ipsum dolor sit amet consectetur",
+            penulis: "Nama Penulis",
+            tanggal: "Sabtu, 19 Agustus 2023",
+            gambar: "images/icons/breaking-news.png",
+            link: "#"
+        },
+    ]
+    
+    berita.forEach(function(br){
+        beritaCard += `<div class="berita-card">
+                <img src="${br.gambar}" alt="Berita Terbaru" class="berita-card-cover">
+                <div class="berita-card-deskripsi">
+                    <p class="berita-card-tanggal"><img src="images/icons/clock.png" alt="Clock Icon">${br.tanggal}</p>
+                    <a href="${br.link}" class="berita-card-judul">${br.judul}</a>
+                    <p class="berita-card-penulis"><img src="images/icons/user.png" alt="User Icon">${br.penulis}</p>
+                </div>
+            </div>`;
+    });
+
+    beritaTerbaru.innerHTML += beritaCard;
+}
+
 renderJadwalSholat();
 renderMenu();
+renderBerita();

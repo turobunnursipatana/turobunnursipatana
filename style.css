@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,15 +17,33 @@ body {
     background-color: bisque;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
 header {
     width: 100%;
 }
 
 header #masjid-header {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 header #masjid-header #title {
@@ -113,7 +134,7 @@ header .navbar .navbar-link:hover {
 }
 
 #info .info-card{
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -175,10 +196,12 @@ header .navbar .navbar-link:hover {
 
 #infaq {
     background-color: black;
+    padding: 2rem 0;
+    cursor: default;
 }
 
 #infaq .infaq-card {
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     gap: 2rem;
@@ -191,15 +214,27 @@ header .navbar .navbar-link:hover {
 }
 
 #infaq .infaq-card .infaq-card-1 .infaq-judul {
+    width: fit-content;
     color: bisque;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
     font-weight: 700;
+    border: 2px solid bisque;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#infaq .infaq-card .infaq-card-1 .infaq-judul:hover {
+    background-color: bisque;
+    color: black;
 }
 
 #infaq .infaq-card .infaq-card-1 .infaq-isi {
     background-color: bisque;
-    padding: 1rem;
+    /* padding: 1rem; */
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 table {
@@ -208,9 +243,10 @@ table {
 }
 
 table, th, td {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     text-align: start;
-    padding: 0.5rem;
+    padding: 0.8rem 1rem;
+    align-items: center;
 }
 
 table thead, tfoot {
@@ -224,21 +260,36 @@ table thead, tfoot {
 }
 
 #infaq .infaq-card .infaq-card-2 .infaq-judul {
+    width: fit-content;
     color: bisque;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 1rem;
     text-transform: uppercase;
     font-weight: 700;
+    border: 2px solid bisque;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-judul:hover {
+    background-color: bisque;
+    color: black;
 }
 
 #infaq .infaq-card .infaq-card-2 .infaq-isi {
-    color: bisque;
+    background-color: bisque;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 #infaq .infaq-card .infaq-card-2 .infaq-isi .saldo {
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    background-color: rgba(222, 184, 135, 0.5);
+    padding: 0.5rem 1rem;
+    /* box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #infaq .infaq-card .infaq-card-2 .infaq-isi .saldo span:nth-child(2) {
@@ -247,14 +298,136 @@ table thead, tfoot {
 
 #infaq .infaq-card .infaq-card-2 .infaq-isi .transfer {
     font-size: 0.8rem;
-    margin-bottom: 0.8rem;
+    padding: 1rem;
+}
+
+#infaq .infaq-card .infaq-card-2 .infaq-isi .rekening {
+    padding: 0 1rem;
 }
 
 #infaq .infaq-card .infaq-card-2 .infaq-isi .rekening p:last-child {
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-size: 0.8rem;
 }
 
 #infaq .infaq-card .infaq-card-2 .infaq-isi .rekening p:last-child span {
     font-weight: 700;
+}
+
+#berita {
+    padding: 2rem;
+    cursor: default;
+}
+
+#berita .berita-header {
+    width: fit-content;
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto 1.5rem;
+    cursor: default;
+    transition: all 0.2s ease-in-out;
+}
+
+#berita .berita-header:hover {
+    background-color: black;
+    color: bisque;
+}
+
+#berita .berita-terbaru {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#berita .berita-terbaru .berita-card {
+    background-color: rgba(222, 184, 135, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-cover {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-deskripsi {
+    background-color: rgba(222, 184, 135, 0.3);
+    padding: 1rem;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-tanggal {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-tanggal img {
+    width: 0.8rem;
+    margin-right: 0.2rem;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-judul {
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-penulis {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+#berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-penulis img {
+    width: 1rem;
+    margin-right: 0.2rem;
+}
+
+#agenda-kerja {
+    background-color: black;
+    padding: 2rem;
+}
+
+#agenda-kerja .agenda {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#agenda-kerja .agenda .agenda-card {
+    width: 100%;
+    height: 300px;
+    background-color: bisque;
+    border-radius: 0.5rem;
+    overflow: scroll;
+}
+
+#agenda-kerja .agenda .agenda-card .agenda-card-judul {
+    background-color: rgba(222, 184, 135, 0.4);
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#agenda-kerja .agenda .agenda-card .agenda-card-isi {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#agenda-kerja .agenda .agenda-card .agenda-card-isi .agenda-card-isi-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
