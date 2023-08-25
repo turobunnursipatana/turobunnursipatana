@@ -120,7 +120,7 @@ header .navbar {
 
 header .navbar .navbar-link{
     color: bisque;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
     transition: all 0.2s ease-in-out;
 }
 
@@ -366,6 +366,7 @@ table thead, tfoot {
     display: flex;
     align-items: center;
     font-size: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 #berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-tanggal img {
@@ -383,10 +384,12 @@ table thead, tfoot {
     display: flex;
     align-items: center;
     font-style: italic;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
 }
 
 #berita .berita-terbaru .berita-card .berita-card-deskripsi .berita-card-penulis img {
-    width: 1rem;
+    width:0.8rem;
     margin-right: 0.2rem;
 }
 
@@ -430,4 +433,128 @@ table thead, tfoot {
 
 #agenda-kerja .agenda .agenda-card .agenda-card-isi .agenda-card-isi-list {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#layanan {
+    padding: 2rem;
+    cursor: default;
+}
+
+#layanan .layanan-header {
+    width: fit-content;
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto 1.5rem;
+    cursor: default;
+    transition: all 0.2s ease-in-out;
+}
+
+#layanan .layanan-header:hover {
+    background-color: black;
+    color: bisque;
+}
+
+#layanan .daftar-layanan {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#layanan .daftar-layanan .layanan-card {
+    background-color: rgba(222, 184, 135, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#layanan .daftar-layanan .layanan-card .layanan-card-cover {
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+#layanan .daftar-layanan .layanan-card .layanan-card-deskripsi {
+    background-color: rgba(222, 184, 135, 0.3);
+    padding: 1rem;
+}
+
+#layanan .daftar-layanan .layanan-card .layanan-card-deskripsi .layanan-card-judul {
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    display: block;
+}
+
+#layanan .daftar-layanan .layanan-card .layanan-card-deskripsi .layanan-card-contact {
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tausiyah {
+    background-color: black;
+    padding: 2rem 0;
+    cursor: default;
+}
+
+#tausiyah .tausiyah-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+}
+
+#tausiyah .tausiyah-card .tausiyah-card-1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#tausiyah .tausiyah-card .tausiyah-card-1 .tausiyah-judul {
+    width: fit-content;
+    color: bisque;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 2px solid bisque;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#tausiyah .tausiyah-card .tausiyah-card-1 .tausiyah-judul:hover {
+    background-color: bisque;
+    color: black;
+}
+
+#tausiyah .tausiyah-card .tausiyah-card-1 .tausiyah-isi {
+    background-color: bisque;
+    /* padding: 1rem; */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#tausiyah .tausiyah-card .tausiyah-card-1 .tausiyah-isi .tausiyah-cover {
+    width: 20%;
+    background-size: cover;
+}
+
+#tausiyah .tausiyah-card .tausiyah-card-1 .tausiyah-isi .tausiyah-deskripsi {
+    padding: 1rem;
 }

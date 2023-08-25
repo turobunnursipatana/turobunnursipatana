@@ -160,6 +160,72 @@ const renderBerita = () => {
     beritaTerbaru.innerHTML += beritaCard;
 }
 
+// LAYANAN
+const renderLayanan = () => {
+    let daftarLayanan = document.querySelector('.daftar-layanan');
+    let layananCard = "";
+    var layanan = [
+        {
+            layanan: "Pernikahan",
+            link: "#",
+            nama: "Nama Lengkap",
+            notelpon: "081234567890",
+            gambar: "images/icons/24-7.png",
+        },
+        {
+            layanan: "Madrasah",
+            link: "#",
+            nama: "Nama Lengkap",
+            notelpon: "081234567890",
+            gambar: "images/icons/24-7.png",
+        },
+        {
+            layanan: "Pemakaman",
+            link: "#",
+            nama: "Nama Lengkap",
+            notelpon: "081234567890",
+            gambar: "images/icons/24-7.png",
+        },
+        {
+            layanan: "Muallaf Center",
+            link: "#",
+            nama: "Nama Lengkap",
+            notelpon: "081234567890",
+            gambar: "images/icons/24-7.png",
+        },
+        {
+            layanan: "Konseling",
+            link: "#",
+            nama: "Nama Lengkap",
+            notelpon: "081234567890",
+            gambar: "images/icons/24-7.png",
+        },
+        {
+            layanan: "Amil Zakat",
+            link: "#",
+            nama: "Nama Lengkap",
+            notelpon: "081234567890",
+            gambar: "images/icons/24-7.png",
+        },
+    ]
+    
+    layanan.forEach(function(ly){
+        layananCard += `<div class="layanan-card">
+                <img src="${ly.gambar}" alt="Berita Terbaru" class="layanan-card-cover">
+                <div class="layanan-card-deskripsi">
+                    <a href="${ly.link}" class="layanan-card-judul">${ly.layanan}</a>
+                    <div class="layanan-card-contact">
+                        <span class="layanan-card-contact-nama">${ly.nama}</span>
+                        <span class="layanan-card-contact-telp">${ly.notelpon}</span>
+                    </div>
+                </div>
+            </div>`;
+    });
+
+    daftarLayanan.innerHTML += layananCard;
+}
+
 renderJadwalSholat();
 renderMenu();
 renderBerita();
+renderLayanan();
